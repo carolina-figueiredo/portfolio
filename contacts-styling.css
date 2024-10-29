@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'amigh';
+    src: url('amigh.ttf') format('truetype');
+}
+
+body {
+    background-color: #FCFBF7;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.contactssentence {
+    margin-top: clamp(80px, 15vh, 180px); /* Responsive top margin */
+    margin-bottom: 0;
+    align-content: center;
+}
+
+h1 {
+    color: #534741;
+    text-align: center;
+    font-size: clamp(60px, 10vw, 120px); /* Responsive font size */
+    text-decoration: none;
+    font-family: 'amigh';
+    font-weight: 300;
+    margin-bottom: 20px;
+    padding: 0 20px; /* Add some padding for small screens */
+}
+
+#navbar{
+    padding: 20px; 
+    text-align: center;
+    border-bottom: 2px solid #534741;
+    background-image: url(/portfolio/images/Asset\ 4.jpg);
+    background-size: 450px;
+}
+
+.navbar-link a:hover {
+    color: black; 
+    font-weight: bold;  
+}
+
+.navbar-link a.active {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.navbar-link a {
+    color: #534741;
+    text-decoration: none;
+    text-transform: none;
+    margin-right: 150px;
+    margin-left: 150px;
+}
+
+.info {
+    line-height: 1.5;
+    color: #534741;
+    text-align: center;
+    font-size: clamp(16px, 2vw, 25px);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    padding: 0 20px; /* Add padding for small screens */
+    margin-top: 20px;
+}
+
+.info p {
+    margin: 0;
+    padding: 5px 0;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .navbar-link {
+        padding: 0 10px;
+    }
+    
+    .navbar-link a {
+        margin: 0;
+        padding: 8px 15px;
+    }
+
+    .contactssentence {
+        margin-top: 100px; /* Reduced top margin for tablets */
+    }
+
+    h1 {
+        margin-bottom: 15px;
+    }
+
+    .info {
+        font-size: clamp(14px, 2vw, 20px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #navbar {
+        padding: 10px;
+    }
+
+    .navbar-link {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .navbar-link a {
+        margin: 5px 0;
+        padding: 8px 15px;
+    }
+
+    .contactssentence {
+        margin-top: 60px; /* Further reduced top margin for mobile */
+    }
+
+    h1 {
+        margin-bottom: 10px;
+    }
+
+    /* Make the break in "questions or need" optional on small screens */
+    .info br {
+        display: none;
+    }
+
+    .info p {
+        padding: 3px 0;
+    }
+}
+
+/* For very small screens */
+@media screen and (max-width: 320px) {
+    h1 {
+        font-size: clamp(40px, 8vw, 60px);
+    }
+
+    .info {
+        font-size: clamp(12px, 1.8vw, 16px);
+    }
+}

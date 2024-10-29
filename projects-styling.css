@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+}
+
+.your.wide.element{
+    max-width: 100%;
+    overflow: hidden;
+}
+
+body {
+    background-color: #FCFBF7;
+    background-size: cover;
+
+}
+
+body, .main-container {
+    margin: 0;
+    padding: 0;
+}
+
+.container-causing-issue{
+    overflow-x: hidden; /* Prevents horizontal scroll on this element */
+    width: 100%;
+}
+
+
+#navbar{
+    padding: 20px; 
+    text-align: center;
+    border-bottom: 2px solid #534741;
+    background-image: url(/portfolio/images/Asset\ 4.jpg);
+    background-size: 450px;
+}
+
+.navbar-link a.active {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.navbar-link a:hover {
+    color: black; 
+    font-weight: bold;  
+}
+
+
+.navbar-link a {
+    color: #534741;
+    text-decoration: none;
+    text-transform: none;
+    margin-right: 150px;
+    margin-left: 150px;
+    
+}
+
+/* images auto scroll */
+
+.scroller-wrapper {
+    /* How long one slide is visible on screen (from entering screen to leaving it) */
+    --scrolling-gallery-item-duration: 35s;
+    /* How many items we want to see on screen at once */
+    --scrolling-gallery-items-visible: 5;
+    /* How many items are to scroll */
+    --scrolling-gallery-items-total: 7;
+    will-change: transform;
+    white-space: nowrap;
+    justify-content: center;
+    width: 100%;
+    padding-top: 60px;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Auto-fit grid items */
+    width: 100%;
+    overflow-x: hidden;
+    height: 600px;
+
+}
+.your-fixed-or-tranformed-element {
+    position: relative; /* Use relative or static positioning if needed */
+    transform: none;
+
+}
+
+.scroller {
+    animation-duration: calc(var(--scrolling-gallery-item-duration, 1s) / var(--scrolling-gallery-items-visible) * var(--scrolling-gallery-items-total));
+    animation-timing-function: linear;
+    animation-name: scrolling-gallery;
+    animation-iteration-count: var(--scrolling-gallery-items-visible);
+    display: flex;
+    white-space: nowrap;
+    gap: none;
+}
+
+.scroller-container {
+    /* Without this, scroll will jump on desktop if any vertical scrollbar is shown */
+    width: 190vw;
+    display: block;
+    object-fit: cover;
+    position: relative;
+    height: 500px;
+    z-index: 3;
+
+}
+
+.scroller-item {
+    flex: 1 0 calc(100% / var(--scrolling-gallery-items-visible));
+    /* If you want to have it continuous without any spaces, remove two lines below */
+     box-sizing: 700px;
+    margin: 0;
+}
+
+.scroller img {
+    display: block;
+    object-fit: contain;
+    object-position: center;
+    width: 400px; /* sizes of the images */
+    height: 500px;
+    
+
+    transition: transform 0.3s ease;
+}
+
+/* hover image */
+
+.scroller img:hover {
+    transform: scale(1.2);
+}
+
+@keyframes scrolling-gallery {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+.scroller:hover,
+.scroller:focus {
+    animation-play-state: paused;
+}
+.welcomesentence {
+    height: 90vh;
+    align-content: center;
+}
+
+@font-face {
+    font-family: 'amigh';
+    src: url('amigh.ttf') format('truetype');
+}
+
+h1{
+    color: #534741;
+    text-align: center;
+    font-size: 120px;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 0px;
+    font-family: 'amigh';
+    font-weight: 300;
+    
+}

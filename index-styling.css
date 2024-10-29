@@ -1,0 +1,142 @@
+@font-face {
+    font-family: 'amigh';
+    src: url('amigh.ttf') format('truetype');
+}
+
+/* Base styles */
+body {
+    background-image: url(/portfolio/images/Asset\ 4.jpg);
+    background-size: 850px;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Navbar styles */
+#navbar{
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #534741;
+    text-decoration: none;
+}
+
+.navbar-link a:hover {
+    color: black; 
+    font-weight: bold;  
+}
+
+.navbar-link a.active {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.navbar-link a {
+    color: #534741;
+    text-decoration: none;
+    text-transform: none;
+    margin-right: 150px;
+    margin-left: 150px;
+}
+
+/* Welcome section styles */
+.welcomesentence {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+h1 {
+    color: #534741;
+    text-align: center;
+    font-size: 120px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-family: 'amigh';
+    font-weight: 300;
+}
+
+h2 {
+    color: #534741;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    font-family: 'amigh';
+    font-weight: 300;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1024px) {
+    body {
+        background-size: 600px;
+    }
+
+    h1 {
+        font-size: 100px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    .navbar-link a {
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-size: 450px;
+    }
+
+    h1 {
+        font-size: 80px;
+        margin-top: 30px;
+    }
+
+    h2 {
+        font-size: 35px;
+    }
+
+    .navbar-link {
+        gap: 10px;
+    }
+
+    .navbar-link a {
+        margin: 0;
+        padding: 5px 10px;
+    }
+
+    .welcomesentence {
+        height: 80vh;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        background-size: 300px;
+    }
+
+    h1 {
+        font-size: 50px;
+        margin-top: 20px;
+    }
+
+    h2 {
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+
+    .navbar-link {
+        flex-direction: column;
+    }
+
+    .welcomesentence {
+        height: 70vh;
+    }
+}
